@@ -1,0 +1,17 @@
+{
+  "name": "awsmap",
+  "version": "0.0.1",
+  "description": "",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vot Z <http://vot-z.com>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.0",
+    "aws-sdk": "^2.4.7",
+    "clarg": "0.0.2",
+    "lodash": "^4.13.1"
+  }
+}
