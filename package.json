@@ -1,13 +1,24 @@
 {
   "name": "awsmap",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "cli.js",
+  "bin": {
+    "awsmap": "cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://vot@github.com/vot/awsmap.git"
+  },
   "author": "Vot Z <http://vot-z.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vot/awsmap/issues"
+  },
+  "homepage": "https://github.com/vot/awsmap",
   "dependencies": {
     "async": "^2.0.0",
     "aws-sdk": "^2.4.7",
