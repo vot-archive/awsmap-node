@@ -1,7 +1,9 @@
 # AWS mapper
 
-This tool allows you to quickly list all EC2 instances created in AWS.
-That's basically it.
+This tool allows you to quickly list all EC2 instances or S3 buckets created
+in an AWS account.
+
+You can add multiple accounts and toggle between them.
 
 ## Usage
 
@@ -13,6 +15,8 @@ awsmap
 
 You can also pass some options. First argument will be used as filter/grep.
 
+To list S3 buckets you have to pass -m s3 (or --mode s3) switch.
+
 You can also restrict the mapper to only scan one environment with -e (or --env) switch.
 
 Finally you can group the results to see all IPs of machines with a certain name
@@ -20,6 +24,7 @@ on a single line by using -g (--group) switch.
 
 ```
 awsmap product -e dev -g
+awsmap product -e prod -m s3
 ```
 
 ## Config file
