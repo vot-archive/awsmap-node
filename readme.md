@@ -5,6 +5,13 @@ in an AWS account.
 
 You can add multiple accounts and toggle between them.
 
+## Installation
+
+```
+npm install awsmap -g
+```
+
+
 ## Usage
 
 Simply run the script with no arguments to list everything.
