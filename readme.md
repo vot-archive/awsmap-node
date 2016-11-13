@@ -1,5 +1,13 @@
 # AWS mapper
 
+[![NPM Version][npm-img]][npm-url]
+[![NPM Downloads][npm-dl-img]][npm-url]
+
+[npm-url]: https://npmjs.org/package/awsmap
+[npm-img]: https://img.shields.io/npm/v/awsmap.svg
+[npm-dl-img]: https://img.shields.io/npm/dm/awsmap.svg
+
+
 This tool allows you to quickly list EC2 instances or S3 buckets created
 in all defined AWS accounts. grep friendly.
 
