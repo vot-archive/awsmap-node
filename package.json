@@ -1,7 +1,7 @@
 {
   "name": "awsmap",
-  "version": "0.0.3",
-  "description": "",
+  "version": "0.0.4",
+  "description": "Quickly list EC2 instances, S3 buckets or Elastic Load Balancers created across all configured AWS accounts at once. grep friendly.",
   "main": "cli.js",
   "bin": {
     "awsmap": "cli.js"
@@ -9,6 +9,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "aws",
+    "multiple",
+    "scan",
+    "list",
+    "map",
+    "instances",
+    "buckets",
+    "grep",
+    "cli",
+    "ec2",
+    "elb",
+    "s3"
+  ],
   "repository": {
     "type": "git",
     "url": "https://vot@github.com/vot/awsmap.git"

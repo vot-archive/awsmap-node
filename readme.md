@@ -8,10 +8,10 @@
 [npm-dl-img]: https://img.shields.io/npm/dm/awsmap.svg
 
 
-This tool allows you to quickly list EC2 instances or S3 buckets created
-in all defined AWS accounts. grep friendly.
+This tool allows you to quickly list EC2 instances, S3 buckets or Elastic
+Load Balancers created across all configured AWS accounts at once. grep friendly.
 
-You can toggle between accounts or map all of them at once.
+You can limit the execution to one account or use all of them at once.
 
 This does not utilise caching of any sort, you always get live data.
 
@@ -24,7 +24,7 @@ npm install awsmap -g
 
 ## Usage
 
-Simply run the script with no arguments to list everything.
+Simply run the script with no arguments to list EC2 instances.
 
 ```
 awsmap
@@ -34,10 +34,13 @@ You can also pass some options. First argument will be used as filter/grep.
 
 To list S3 buckets you have to pass `-m s3` (or `--mode s3`) switch.
 
-You can also restrict the mapper to only scan one environment with `-e {environment}` (`--env {environment}`) switch.
+To list load balancers use `-m elb` (or `--mode elb`) switch.
 
-Finally you can group the results to see all IPs of machines with a certain name
-on a single line by using `-g` (`--group`) switch.
+You can also restrict the mapper to only scan one environment/account
+with `-e {environment}` (`--env {environment}`) switch.
+
+Finally, with EC2 you can group the results to see IPs of machines with a certain name
+on a single line for a more compact display by using `-g` (`--group`) switch.
 
 ```
 awsmap product -e dev -g

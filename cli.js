@@ -5,8 +5,10 @@ var parsedCLI = require('clarg')();
 
 var config = require('./lib/readConfig');
 var mapEC2 = require('./lib/mapEC2');
+var mapELB = require('./lib/mapELB');
 var mapS3 = require('./lib/mapS3');
 var printResultsEC2 = require('./lib/printResultsEC2');
+var printResultsELB = require('./lib/printResultsELB');
 var printResultsS3 = require('./lib/printResultsS3');
 
 var _ArgEnv = parsedCLI.opts.e || parsedCLI.opts.env;
@@ -49,6 +51,13 @@ async.each(Object.keys(configs), function (key, cb) {
       printResultsS3(data, key);
       cb();
     });
+  } else if (_ArgMode === 'elb') {
+    return mapELB(cfg, function (err, data) {
+      if (err) return cb(err);
+
+      printResultsELB(data, key);
+      cb();
+    });
   } else {
     return mapEC2(cfg, function (err, data) {
       if (err) return cb(err);
@@ -60,7 +69,7 @@ async.each(Object.keys(configs), function (key, cb) {
 
 }, function (err, data) {
   if (err) {
-    return console.error(err);
+    return console.error(err.message);
   }
   process.exit(0);
 });
