@@ -1,8 +1,8 @@
 {
   "name": "awsmap",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Quickly list EC2 instances, S3 buckets or Elastic Load Balancers created across all configured AWS accounts at once. grep friendly.",
-  "main": "cli.js",
+  "main": "index.js",
   "bin": {
     "awsmap": "cli.js"
   },
